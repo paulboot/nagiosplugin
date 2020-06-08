@@ -63,10 +63,14 @@ Metric
 Context
    Additional information to evaluate a metric. A context has usually a warning
    and critical range which allows to determine if a given metric is OK or not.
+   If a plugin measures multiple metrics with *different* warning and critical
+   ranges then each metric has a unique Context.
    Contexts also include information on how to present a metric in a
    human-readable way.
 
-   *Example: warning=0.5, critical=1.0*
+   *Example 1: warning=0.5, critical=1.0*
+   *Example 2(two Contexts): warnCPUidle=50 critCPUidle=80 warnCPUwait=20
+   critCPUwait=40*
 
 Result
    Product of a metric and a context. A result consists of a state ("ok",
@@ -86,6 +90,7 @@ The following tutorials which will guide you through the most important
 features of :mod:`nagiosplugin`.
 
 .. hint::
+   The there tutorials explained....XXXX
 
    Study the source code in the :file:`nagiosplugin/examples` directory for
    complete examples.

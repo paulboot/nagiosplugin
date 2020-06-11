@@ -7,8 +7,10 @@ First steps with nagiosplugin
 This tutorial will guide you through all important steps of writing a check with
 the :py:mod:`nagiosplugin` class library. Read this to get started. Writing a plugin
 using the nagiosplugin module requires knowledge of object oriented coding concepts
-such as creating sub classes, overriding of methods and use of _Named Tuples: https://docs.python.org/3/library/collections.html#:~:text=Named%20tuples%20assign%20
-meaning%20to,name%20instead%20of%20position%20index. .
+such as creating sub classes, overriding of methods and use of `Named Tuples <https://docs.python.org/3/library/collections.html#:~:text=Named%20tuples%20assign%20
+meaning%20to,name%20instead%20of%20position%20index.>`_.
+
+`Python home page <http://www.python.org>`_
 
 Key concepts
 ============

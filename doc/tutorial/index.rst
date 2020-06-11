@@ -74,9 +74,9 @@ Context
    Contexts also include information on how to present a metric in a
    human-readable way.
 
-   | *Example 1: warning=0.5, critical=1.0*
-   | *Example 2(two Contexts): warnCPUidle=50 critCPUidle=80 warnCPUwait=20
-   critCPUwait=40*
+   | *Example 1 (one Context): warning=0.5, critical=1.0*
+   | *Example 2 (two Contexts): warnCPUidle=50 critCPUidle=80 warnCPUwait=20
+     critCPUwait=40*
 
 Result
    Product of a metric and a context. A result consists of a state ("ok",

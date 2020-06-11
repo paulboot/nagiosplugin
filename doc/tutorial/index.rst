@@ -7,7 +7,8 @@ First steps with nagiosplugin
 This tutorial will guide you through all important steps of writing a check with
 the :py:mod:`nagiosplugin` class library. Read this to get started. Writing a plugin
 using the nagiosplugin module requires knowledge of Python object oriented concepts
-such as creating sub classes, overriding of methods and use of `Named Tuples <https://docs.python.org/3/library/collections.html#collections.namedtuple>`_.
+such as creating sub classes, overriding of methods and use of `Named Tuples
+<https://docs.python.org/3/library/collections.html#collections.namedtuple>`_.
 
 Key concepts
 ============
@@ -50,15 +51,18 @@ Here is a diagram with the most important classes and their relationships::
                  +---------+                /
 
 Resource
-   A model of the thing being monitored. It should usually have the same name
-   as the whole plugin. Generates one or more metrics.
+   A model of the thing being monitored. The sub class created from the Resource
+   base class should usually have the same name as the `SERVICE` name.
+   Generates one or more metrics by overriding the `def probe(self):` method.
+   The `probe()` method must return a named tuple object as defined by the
+   Metric class.
 
    *Example: system load*
 
 Metric
-   A single measured data point. A metric consists of a name, a value, a unit,
-   and optional minimum and maximum bounds. Most metrics are scalar (the value
-   can be represented as single number).
+   A single measured data point stored in a named tuple object. A metric
+   consists of a name, a value, a unit, and optional minimum and maximum bounds.
+    Most metrics are scalar (the value can be represented as single number).
 
    *Example: load1=0.75*
 
@@ -70,8 +74,8 @@ Context
    Contexts also include information on how to present a metric in a
    human-readable way.
 
-   *Example 1: warning=0.5, critical=1.0*  
-   *Example 2(two Contexts): warnCPUidle=50 critCPUidle=80 warnCPUwait=20
+   | *Example 1: warning=0.5, critical=1.0*
+   | *Example 2(two Contexts): warnCPUidle=50 critCPUidle=80 warnCPUwait=20
    critCPUwait=40*
 
 Result

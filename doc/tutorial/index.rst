@@ -52,9 +52,10 @@ Here is a diagram with the most important classes and their relationships::
 
 Resource
    A model of the thing being monitored. The sub class created from the Resource
-   base class should usually have the same name as the `SERVICE` name.
-   Generates one or more metrics by overriding the `def probe(self):` method.
-   The `probe()` method must return a named tuple object as defined by the
+   base class should usually have the same name as the ``SERVICE`` name from the
+   plugin.
+   Generates one or more metrics by overriding the ``def probe(self):`` method.
+   The ``probe()`` method must return a named tuple object as defined by the
    Metric class.
 
    *Example: system load*
